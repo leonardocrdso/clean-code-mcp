@@ -1,0 +1,54 @@
+{
+  "name": "@leonardocrdso/clean-code-mcp",
+  "version": "1.0.0",
+  "description": "MCP server with 63 Clean Code principles — search, browse, and review code against best practices",
+  "type": "module",
+  "main": "build/index.js",
+  "bin": {
+    "clean-code-mcp": "build/index.js"
+  },
+  "files": [
+    "build/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "dev": "bun run --watch src/index.ts",
+    "start": "bun run src/index.ts",
+    "build": "bun build src/index.ts --outdir build --target node",
+    "prepublishOnly": "bun run build"
+  },
+  "keywords": [
+    "clean-code",
+    "mcp",
+    "model-context-protocol",
+    "code-review",
+    "best-practices",
+    "solid",
+    "refactoring",
+    "code-quality",
+    "claude",
+    "ai"
+  ],
+  "author": "leonardocrdso",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonardocrdso/clean-code-mcp.git"
+  },
+  "homepage": "https://github.com/leonardocrdso/clean-code-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/leonardocrdso/clean-code-mcp/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.26.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.0.0"
+  }
+}
