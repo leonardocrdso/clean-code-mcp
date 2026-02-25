@@ -251,7 +251,7 @@ class ProductService { getProduct(id: string) {} }`,
     name: "Keep Functions Small",
     category: "functions",
     description:
-      "Functions should be small. The first rule of functions is that they should be small. The second rule is that they should be smaller than that. Small functions are easier to read, understand, and test.",
+      "Functions should be small. The first rule of functions is that they should be small. The second rule is that they should be smaller than that. Small functions are easier to read, understand, and maintain.",
     examples: [
       {
         label: "Bad",
@@ -922,7 +922,7 @@ if (employee !== null) { /* ... */ }`,
     name: "One Assert per Test",
     category: "unit-testing",
     description:
-      "Tests are easiest to understand when each test function contains a single assertion. Multiple assertions can obscure which concept is being tested. When a test fails, you immediately know what's broken.",
+      "If your project uses tests, they are easiest to understand when each test function contains a single assertion. Multiple assertions can obscure which concept is being tested. When a test fails, you immediately know what's broken.",
     examples: [
       {
         label: "Bad",
@@ -956,7 +956,7 @@ test("new user starts as active", () => {
     name: "Tests Should Be Fast (F.I.R.S.T.)",
     category: "unit-testing",
     description:
-      "Fast tests are run frequently. Slow tests are run infrequently. When tests run slow, you won't want to run them frequently, and you'll lose the ability to catch problems early. Tests should run in milliseconds.",
+      "If your project uses tests, fast tests are run frequently. Slow tests are run infrequently. When tests run slow, you won't want to run them frequently, and you'll lose the ability to catch problems early. Aim for tests that run in milliseconds.",
     examples: [
       {
         label: "Bad",
@@ -986,7 +986,7 @@ test("new user starts as active", () => {
     name: "Tests Should Be Independent",
     category: "unit-testing",
     description:
-      "Tests should not depend on each other. One test should not set up the conditions for the next. You should be able to run each test independently and in any order.",
+      "If your project uses tests, they should not depend on each other. One test should not set up the conditions for the next. You should be able to run each test independently and in any order.",
     examples: [
       {
         label: "Bad",
@@ -1017,7 +1017,7 @@ test("updates user name", () => {
     name: "Tests Should Be Readable",
     category: "unit-testing",
     description:
-      "Readability is perhaps even more important in tests than in production code. Tests serve as documentation for how code should be used. Each test should tell a clear story: arrange, act, assert.",
+      "If your project uses tests, readability is perhaps even more important than in production code. Tests serve as documentation for how code should be used. Each test should tell a clear story: arrange, act, assert.",
     examples: [
       {
         label: "Bad",
@@ -1048,7 +1048,7 @@ test("updates user name", () => {
     name: "Test Boundary Conditions",
     category: "unit-testing",
     description:
-      "Bugs often cluster at boundaries — empty arrays, zero values, null inputs, max limits. Write tests that exercise boundary conditions explicitly. It's where most errors hide.",
+      "Bugs often cluster at boundaries — empty arrays, zero values, null inputs, max limits. If your project uses tests, exercise boundary conditions explicitly. It's where most errors hide.",
     examples: [
       {
         label: "Good",
@@ -1601,7 +1601,7 @@ async function processItem(item: Item) {
     name: "Separate Construction from Use",
     category: "systems",
     description:
-      "The startup process of constructing objects and wiring dependencies is a separate concern from the runtime logic. Mixing construction with use creates tight coupling and makes testing difficult.",
+      "The startup process of constructing objects and wiring dependencies is a separate concern from the runtime logic. Mixing construction with use creates tight coupling and makes the code harder to maintain and extend.",
     examples: [
       {
         label: "Bad",
@@ -1634,7 +1634,7 @@ async function processItem(item: Item) {
     name: "Use Dependency Injection",
     category: "systems",
     description:
-      "Rather than having an object create its own dependencies, pass them in from outside. This separates construction from use, makes code testable, and allows different implementations to be swapped in.",
+      "Rather than having an object create its own dependencies, pass them in from outside. This separates construction from use, improves flexibility, and allows different implementations to be swapped in.",
     examples: [
       {
         label: "Bad",
@@ -1663,7 +1663,7 @@ class NotificationService {
     name: "Simple Design Rule 1: Runs All the Tests",
     category: "emergence",
     description:
-      "A system that cannot be verified shouldn't be deployed. Making a system testable pushes us toward small, single-purpose classes and loose coupling — which naturally leads to better design.",
+      "A system that can be verified is more reliable. Designing for verifiability pushes us toward small, single-purpose classes and loose coupling — which naturally leads to better design. Tests are a valuable tool for verification when the project uses them.",
     examples: [
       {
         label: "Good",
@@ -1733,7 +1733,7 @@ function replaceImage(newImage: Image) {
     name: "Simple Design Rule 3: Expressive",
     category: "emergence",
     description:
-      "Code should clearly express the intent of its author. The clearer code is, the less time others will spend understanding it. Use good names, keep functions and classes small, use standard nomenclature (design patterns), and write well-crafted unit tests.",
+      "Code should clearly express the intent of its author. The clearer code is, the less time others will spend understanding it. Use good names, keep functions and classes small, and use standard nomenclature (design patterns). When the project includes tests, ensure they are well-crafted and expressive too.",
     examples: [
       {
         label: "Bad",
