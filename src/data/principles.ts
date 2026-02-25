@@ -1663,7 +1663,7 @@ class NotificationService {
     name: "Simple Design Rule 1: Runs All the Tests",
     category: "emergence",
     description:
-      "A system that can be verified is more reliable. Designing for verifiability pushes us toward small, single-purpose classes and loose coupling — which naturally leads to better design. Tests are a valuable tool for verification when the project uses them.",
+      "A system that can be verified is more reliable. Designing for verifiability pushes us toward small, single-purpose classes and loose coupling — which naturally leads to better design. If your project uses tests, they are a valuable tool for verification — but verifiability matters regardless.",
     examples: [
       {
         label: "Good",
