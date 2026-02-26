@@ -25,6 +25,11 @@ const CATEGORY_KEYWORDS: Record<string, PrincipleCategory> = {
   arguments: "functions",
   parameter: "functions",
   parameters: "functions",
+  nesting: "functions",
+  nested: "functions",
+  guard: "functions",
+  conditional: "functions",
+  "if-else": "functions",
 
   comment: "comments",
   comments: "comments",

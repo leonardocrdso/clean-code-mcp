@@ -548,6 +548,51 @@ function isEmailValid(email: string) {
     ],
     tags: ["functions", "dry", "duplication", "reuse", "maintenance"],
   },
+  {
+    id: "use-guard-clauses",
+    name: "Use Guard Clauses (Early Return)",
+    category: "functions",
+    description:
+      "Replace nested conditionals with guard clauses that return early for edge cases and invalid states. " +
+      "This pattern, formalized by Kent Beck in 'Smalltalk Best Practice Patterns' (1997) and cataloged by " +
+      "Martin Fowler as 'Replace Nested Conditional with Guard Clauses', reduces cognitive complexity by " +
+      "eliminating deep nesting. Each guard clause removes one concern from the reader's mental stack, " +
+      "leaving the happy path at the shallowest indentation level. While Robert C. Martin's Clean Code " +
+      "permits multiple returns in small functions, this technique is a natural consequence of keeping " +
+      "functions small and operating at one level of abstraction.",
+    examples: [
+      {
+        label: "Bad",
+        language: "typescript",
+        code: `function getPayAmount(employee: Employee): number {
+  let result: number;
+  if (employee.isSeparated) {
+    result = separatedAmount(employee);
+  } else {
+    if (employee.isRetired) {
+      result = retiredAmount(employee);
+    } else {
+      result = normalPayAmount(employee);
+    }
+  }
+  return result;
+}`,
+      },
+      {
+        label: "Good",
+        language: "typescript",
+        code: `function getPayAmount(employee: Employee): number {
+  if (employee.isSeparated) return separatedAmount(employee);
+  if (employee.isRetired) return retiredAmount(employee);
+  return normalPayAmount(employee);
+}`,
+      },
+    ],
+    tags: [
+      "functions", "guard-clause", "early-return", "nesting",
+      "cognitive-complexity", "readability", "conditional",
+    ],
+  },
 
   // ── Comments ────────────────────────────────────────────
   {
