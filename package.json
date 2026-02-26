@@ -1,6 +1,6 @@
 {
   "name": "@leonardocrdso/clean-code-mcp",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "MCP server with 63 Clean Code principles — search, browse, and review code against best practices",
   "type": "module",
   "main": "build/index.js",
